@@ -74,11 +74,11 @@ The table below is sorted by **Company Size / Revenue / Valuation (Descending)**
 
 While commercial platforms offer single-pane-of-glass correlation, the open-source ecosystem provides modular, enterprise-ready components for building custom CNAPP stacks.
 
-The open-source projects below are sorted by **GitHub Star Count (Descending)**:
+The open-source projects below are sorted by **GitHub Stars_Count (Descending)**:
 
 ### 🛡️ CSPM & Posture Assessment
 
-| Project / Tool | Stars | Description & Key Features | License |
+| Project / Tool | GitHub_Stars | Description & Key Features | License |
 | :--- | :--- | :--- | :--- |
 | **[Trivy](https://github.com/aquasecurity/trivy)** 🛡️ | [<img src="https://img.shields.io/github/stars/aquasecurity/trivy?style=social&color=white" alt="Trivy Stars"/>](https://github.com/aquasecurity/trivy/stargazers) | All-in-one security scanner covering container images, filesystems, IaC, Kubernetes misconfigurations, and SBOM generation. | Apache-2.0 |
 | **[Checkov](https://github.com/bridgecrewio/checkov)** 🔍 | [<img src="https://img.shields.io/github/stars/bridgecrewio/checkov?style=social&color=white" alt="Checkov Stars"/>](https://github.com/bridgecrewio/checkov/stargazers) | Static code analysis tool for Infrastructure as Code (Terraform, CloudFormation, K8s, Helm) with 750+ built-in policies. | Apache-2.0 |
@@ -91,7 +91,7 @@ The open-source projects below are sorted by **GitHub Star Count (Descending)**:
 
 ### ⚡ CWPP & Runtime Security
 
-| Project / Tool | Stars | Description & Key Features | License |
+| Project / Tool | GitHub_Stars | Description & Key Features | License |
 | :--- | :--- | :--- | :--- |
 | **[Falco](https://github.com/falcosecurity/falco)** 🦅 | [<img src="https://img.shields.io/github/stars/falcosecurity/falco?style=social&color=white" alt="Falco Stars"/>](https://github.com/falcosecurity/falco/stargazers) | CNCF Graduated runtime threat detection engine for cloud-native workloads using eBPF and Linux kernel syscall filtering. | Apache-2.0 |
 | **[KubeArmor](https://github.com/kubearmor/KubeArmor)** 🛡️ | [<img src="https://img.shields.io/github/stars/kubearmor/KubeArmor?style=social&color=white" alt="KubeArmor Stars"/>](https://github.com/kubearmor/KubeArmor/stargazers) | CNCF Sandbox LSM-based runtime enforcement engine utilizing AppArmor, SELinux, and BPF-LSM to restrict container capabilities. | Apache-2.0 |
@@ -103,7 +103,7 @@ The open-source projects below are sorted by **GitHub Star Count (Descending)**:
 
 ### 🔑 CIEM & Identity Analysis
 
-| Project / Tool | Stars | Description & Key Features | License |
+| Project / Tool | GitHub_Stars | Description & Key Features | License |
 | :--- | :--- | :--- | :--- |
 | **[Cloudsplaining](https://github.com/salesforce/cloudsplaining)** 🗝️ | [<img src="https://img.shields.io/github/stars/salesforce/cloudsplaining?style=social&color=white" alt="Cloudsplaining Stars"/>](https://github.com/salesforce/cloudsplaining/stargazers) | AWS IAM policy analysis engine created by Salesforce to identify least-privilege violations and escalation paths. | MIT |
 | **[policy_sentry](https://github.com/salesforce/policy_sentry)** 📝 | [<img src="https://img.shields.io/github/stars/salesforce/policy_sentry?style=social&color=white" alt="Policy Sentry Stars"/>](https://github.com/salesforce/policy_sentry/stargazers) | IAM policy generator tool that enforces least-privilege access by authoring policies based on CRUD action declarations. | MIT |
@@ -114,7 +114,7 @@ The open-source projects below are sorted by **GitHub Star Count (Descending)**:
 
 ### 🏗️ IaC, SBOM & Container Security
 
-| Project / Tool | Stars | Description & Key Features | License |
+| Project / Tool | GitHub_Stars | Description & Key Features | License |
 | :--- | :--- | :--- | :--- |
 | **[Syft](https://github.com/anchore/syft)** 📦 | [<img src="https://img.shields.io/github/stars/anchore/syft?style=social&color=white" alt="Syft Stars"/>](https://github.com/anchore/syft/stargazers) | CLI tool and library for generating Software Bill of Materials (SBOM) from container images and filesystems. | Apache-2.0 |
 | **[Grype](https://github.com/anchore/grype)** 🐛 | [<img src="https://img.shields.io/github/stars/anchore/grype?style=social&color=white" alt="Grype Stars"/>](https://github.com/anchore/grype/stargazers) | Vulnerability scanner for container images and filesystems that directly scans Syft-generated SBOMs. | Apache-2.0 |
@@ -125,7 +125,7 @@ The open-source projects below are sorted by **GitHub Star Count (Descending)**:
 
 ### 🕸️ Attack Path Graph & Security Analysis
 
-| Project / Tool | Stars | Description & Key Features | License |
+| Project / Tool | GitHub_Stars | Description & Key Features | License |
 | :--- | :--- | :--- | :--- |
 | **[Cartography](https://github.com/lyft/cartography)** 🌐 | [<img src="https://img.shields.io/github/stars/lyft/cartography?style=social&color=white" alt="Cartography Stars"/>](https://github.com/lyft/cartography/stargazers) | Graph analysis engine by Lyft that ingests cloud assets and relationships into Neo4j to visualize complex attack paths. | Apache-2.0 |
 | **[BloodHound Enterprise / Community](https://github.com/SpecterOps/BloodHound)** 🩸 | [<img src="https://img.shields.io/github/stars/SpecterOps/BloodHound?style=social&color=white" alt="BloodHound Stars"/>](https://github.com/SpecterOps/BloodHound/stargazers) | Active Directory and Azure IAM relationship graph mapping tool used to identify privilege escalation and attack paths. | GPL-3.0 |
@@ -166,3 +166,12 @@ If you find this Cloud Native Application Protection Platform (CNAPP) curated li
 - This repository is a **community-curated index** for informational purposes and does not constitute an explicit endorsement of any tool or commercial vendor.
 - CNAPP platforms process critical telemetry, vulnerability feeds, and identity graphs; ensure rigorous access governance and data privacy controls when evaluating solutions.
 - **Open-Source vs. Enterprise CNAPP Reality**: Assembling open-source tools (e.g., Prowler + Falco + PMapper + Cartography) requires dedicated engineering overhead (~0.5–2 FTE). Commercial SaaS CNAPPs deliver immediate out-of-the-box cross-pillar correlation and managed support.
+
+## ⭐ Star History
+
+<a href="https://star-history.com/#ishandutta2007/Awesome-Cloud-Native-Application-Protection-Platform&Timeline" align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/ishandutta2007_Awesome-Cloud-Native-Application-Protection-Platform_growth.svg">
+    <img alt="Star History Chart" src="assets/ishandutta2007_Awesome-Cloud-Native-Application-Protection-Platform_growth.svg">
+  </picture>
+</a>
