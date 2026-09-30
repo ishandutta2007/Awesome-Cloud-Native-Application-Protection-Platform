@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#090d16"/>
+    </linearGradient>
+
+    <!-- Glowing Accent Gradients -->
+    <linearGradient id="accent-cyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.8"/>
+    </linearGradient>
+    <linearGradient id="accent-purple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#ec4899" stop-opacity="0.8"/>
+    </linearGradient>
+
+    <!-- Card Background Gradient -->
+    <linearGradient id="card-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.8"/>
+    </linearGradient>
+
+    <!-- Glowing Filters -->
+    <filter id="glow-cyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="glow-purple" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes pulseGlow {
+      0% { opacity: 0.3; transform: scale(0.98); }
+      50% { opacity: 0.7; transform: scale(1.02); }
+      100% { opacity: 0.3; transform: scale(0.98); }
+    }
+    @keyframes dashMove {
+      0% { stroke-dashoffset: 100; }
+      100% { stroke-dashoffset: 0; }
+    }
+    @keyframes floatCard {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+      100% { transform: translateY(0px); }
+    }
+    @keyframes nodePulse {
+      0% { r: 6; fill-opacity: 0.6; }
+      50% { r: 9; fill-opacity: 1; }
+      100% { r: 6; fill-opacity: 0.6; }
+    }
+    .bg-glow-1 { animation: pulseGlow 8s ease-in-out infinite; transform-origin: center; }
+    .bg-glow-2 { animation: pulseGlow 6s ease-in-out infinite 2s; transform-origin: center; }
+    .animated-link { stroke-dasharray: 8 6; animation: dashMove 4s linear infinite; }
+    .floating-card-1 { animation: floatCard 5s ease-in-out infinite; }
+    .floating-card-2 { animation: floatCard 6s ease-in-out infinite 1s; }
+    .floating-card-3 { animation: floatCard 5.5s ease-in-out infinite 2.5s; }
+    .pulsing-node { animation: nodePulse 3s ease-in-out infinite; }
+    
+    .title-text { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-weight: 800; fill: #ffffff; }
+    .subtitle-text { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-weight: 500; fill: #94a3b8; }
+    .badge-text { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-weight: 600; font-size: 12px; fill: #e2e8f0; }
+  </style>
+
+  <!-- Base Background -->
+  <rect width="1200" height="400" fill="url(#bg-grad)" rx="16"/>
+
+  <!-- Dynamic Background Glow Blobs -->
+  <circle cx="200" cy="100" r="180" fill="#06b6d4" opacity="0.15" class="bg-glow-1" filter="blur(40px)"/>
+  <circle cx="1000" cy="300" r="220" fill="#8b5cf6" opacity="0.15" class="bg-glow-2" filter="blur(50px)"/>
+  <circle cx="600" cy="200" r="150" fill="#3b82f6" opacity="0.1" class="bg-glow-1" filter="blur(30px)"/>
+
+  <!-- Background Security Graph / Grid Lines (Dynamic Aspect) -->
+  <g opacity="0.25">
+    <path d="M 100 350 L 300 280 L 500 340 L 700 290 L 900 350 L 1100 300" stroke="#38bdf8" stroke-width="2" fill="none" class="animated-link"/>
+    <path d="M 150 50 L 350 110 L 600 60 L 850 120 L 1050 60" stroke="#a855f7" stroke-width="1.5" fill="none" class="animated-link"/>
+    
+    <!-- Graph Nodes -->
+    <circle cx="300" cy="280" r="6" fill="#38bdf8" class="pulsing-node"/>
+    <circle cx="700" cy="290" r="6" fill="#38bdf8" class="pulsing-node" style="animation-delay: 1s;"/>
+    <circle cx="350" cy="110" r="6" fill="#c084fc" class="pulsing-node" style="animation-delay: 1.5s;"/>
+    <circle cx="850" cy="120" r="6" fill="#c084fc" class="pulsing-node" style="animation-delay: 0.5s;"/>
+  </g>
+
+  <!-- Foreground Title Banner & Shield Icon -->
+  <g transform="translate(60, 55)">
+    <!-- Main Title Tag / Category Pill -->
+    <g transform="translate(0, 0)">
+      <rect width="320" height="32" rx="16" fill="url(#accent-cyan)" opacity="0.2"/>
+      <rect width="320" height="32" rx="16" stroke="#06b6d4" stroke-width="1.5" fill="none"/>
+      <text x="16" y="21" class="badge-text" fill="#22d3ee" letter-spacing="1">CLOUD NATIVE SECURITY ECOSYSTEM</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="0" y="80" class="title-text" font-size="44" filter="drop-shadow(0px 4px 12px rgba(0,0,0,0.5))">
+      Awesome CNAPP
+    </text>
+    <text x="0" y="125" class="title-text" font-size="28" fill="#38bdf8" opacity="0.95">
+      Cloud Native Application Protection Platform
+    </text>
+
+    <!-- Subtitle -->
+    <text x="0" y="165" class="subtitle-text" font-size="16">
+      Curated Landscape of CSPM, CWPP, CIEM, IaC Security &amp; Attack Path Analysis
+    </text>
+  </g>
+
+  <!-- Feature Cards Floating Below (Dynamic Elements in lower half) -->
+  <g transform="translate(60, 255)">
+    <!-- Card 1: CSPM -->
+    <g class="floating-card-1" transform="translate(0, 0)">
+      <rect width="240" height="90" rx="12" fill="url(#card-bg)" stroke="#334155" stroke-width="1.5"/>
+      <rect width="240" height="90" rx="12" stroke="#06b6d4" stroke-width="1" fill="none" opacity="0.4"/>
+      <circle cx="30" cy="30" r="14" fill="#06b6d4" opacity="0.2"/>
+      <text x="30" y="35" text-anchor="middle" fill="#22d3ee" font-size="14" font-weight="bold">🛡️</text>
+      <text x="56" y="34" class="title-text" font-size="16">CSPM</text>
+      <text x="16" y="65" class="subtitle-text" font-size="12">Posture Management &amp; CIS</text>
+    </g>
+
+    <!-- Card 2: CWPP -->
+    <g class="floating-card-2" transform="translate(270, 0)">
+      <rect width="240" height="90" rx="12" fill="url(#card-bg)" stroke="#334155" stroke-width="1.5"/>
+      <rect width="240" height="90" rx="12" stroke="#3b82f6" stroke-width="1" fill="none" opacity="0.4"/>
+      <circle cx="30" cy="30" r="14" fill="#3b82f6" opacity="0.2"/>
+      <text x="30" y="35" text-anchor="middle" fill="#60a5fa" font-size="14" font-weight="bold">⚡</text>
+      <text x="56" y="34" class="title-text" font-size="16">CWPP</text>
+      <text x="16" y="65" class="subtitle-text" font-size="12">eBPF &amp; Runtime Protection</text>
+    </g>
+
+    <!-- Card 3: CIEM -->
+    <g class="floating-card-3" transform="translate(540, 0)">
+      <rect width="240" height="90" rx="12" fill="url(#card-bg)" stroke="#334155" stroke-width="1.5"/>
+      <rect width="240" height="90" rx="12" stroke="#8b5cf6" stroke-width="1" fill="none" opacity="0.4"/>
+      <circle cx="30" cy="30" r="14" fill="#8b5cf6" opacity="0.2"/>
+      <text x="30" y="35" text-anchor="middle" fill="#c084fc" font-size="14" font-weight="bold">🔑</text>
+      <text x="56" y="34" class="title-text" font-size="16">CIEM</text>
+      <text x="16" y="65" class="subtitle-text" font-size="12">Cloud IAM &amp; Entitlements</text>
+    </g>
+
+    <!-- Card 4: IaC & Attack Path -->
+    <g class="floating-card-1" transform="translate(810, 0)">
+      <rect width="270" height="90" rx="12" fill="url(#card-bg)" stroke="#334155" stroke-width="1.5"/>
+      <rect width="270" height="90" rx="12" stroke="#ec4899" stroke-width="1" fill="none" opacity="0.4"/>
+      <circle cx="30" cy="30" r="14" fill="#ec4899" opacity="0.2"/>
+      <text x="30" y="35" text-anchor="middle" fill="#f472b6" font-size="14" font-weight="bold">🕸️</text>
+      <text x="56" y="34" class="title-text" font-size="16">IaC &amp; Graph Analysis</text>
+      <text x="16" y="65" class="subtitle-text" font-size="12">Static Scanning &amp; Attack Paths</text>
+    </g>
+  </g>
+</svg>
